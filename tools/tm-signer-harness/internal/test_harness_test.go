@@ -19,7 +19,7 @@ import (
 
 const (
 	keyFileContents = `{
-	"address": "D08FCA3BA74CF17CBFC15E64F9505302BB0E2748",
+	"address": "732D78E95F3414866C58EDD64554A357208D6E89",
 	"pub_key": {
 		"type": "tendermint/PubKeyEd25519",
 		"value": "ZCsuTjaczEyon70nmKxwvwu+jqrbq5OH3yQjcK0SFxc="
@@ -58,7 +58,7 @@ const (
 	},
 	"validators": [
 		{
-		"address": "D08FCA3BA74CF17CBFC15E64F9505302BB0E2748",
+		"address": "732D78E95F3414866C58EDD64554A357208D6E89",
 		"pub_key": {
 			"type": "tendermint/PubKeyEd25519",
 			"value": "ZCsuTjaczEyon70nmKxwvwu+jqrbq5OH3yQjcK0SFxc="

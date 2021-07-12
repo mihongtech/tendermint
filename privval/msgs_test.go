@@ -82,13 +82,13 @@ func TestPrivvalVectors(t *testing.T) {
 		{"ping request", &privproto.PingRequest{}, "3a00"},
 		{"ping response", &privproto.PingResponse{}, "4200"},
 		{"pubKey request", &privproto.PubKeyRequest{}, "0a00"},
-		{"pubKey response", &privproto.PubKeyResponse{PubKey: ppk, Error: nil}, "12240a220a20556a436f1218d30942efe798420f51dc9b6a311b929c578257457d05c5fcf230"},
+		{"pubKey response", &privproto.PubKeyResponse{PubKey: ppk, Error: nil}, "12240a220a2028844d85f4f240357adbafaec37e13171b2263b9203a290d63c3b909f625bad4"},
 		{"pubKey response with error", &privproto.PubKeyResponse{PubKey: cryptoproto.PublicKey{}, Error: remoteError}, "12140a0012100801120c697427732061206572726f72"},
-		{"Vote Request", &privproto.SignVoteRequest{Vote: votepb}, "1a760a74080110031802224a0a208b01023386c371778ecb6368573e539afc3cc860ec3a2f614e54fe5652f4fc80122608c0843d122072db3d959635dff1bb567bedaa70573392c5159666a3f8caf11e413aac52207a2a0608f49a8ded0532146af1f4111082efb388211bc72c55bcd61e9ac3d538d5bb03"},
-		{"Vote Response", &privproto.SignedVoteResponse{Vote: *votepb, Error: nil}, "22760a74080110031802224a0a208b01023386c371778ecb6368573e539afc3cc860ec3a2f614e54fe5652f4fc80122608c0843d122072db3d959635dff1bb567bedaa70573392c5159666a3f8caf11e413aac52207a2a0608f49a8ded0532146af1f4111082efb388211bc72c55bcd61e9ac3d538d5bb03"},
+		{"Vote Request", &privproto.SignVoteRequest{Vote: votepb}, "1a760a74080110031802224a0a20aeec33a2b50baa7373b49260a0bb761f91c1d1c98988f799f0a8050df1b686a1122608c0843d12209d2e1eb75bb8d50b7d65c2fd0727a82e6a1d73ab6ff3397ca88cdbe7dbe4f7082a0608f49a8ded053214c605d815a7781f00219c7f8d9eefc5274e803cb338d5bb03"},
+		{"Vote Response", &privproto.SignedVoteResponse{Vote: *votepb, Error: nil}, "22760a74080110031802224a0a20aeec33a2b50baa7373b49260a0bb761f91c1d1c98988f799f0a8050df1b686a1122608c0843d12209d2e1eb75bb8d50b7d65c2fd0727a82e6a1d73ab6ff3397ca88cdbe7dbe4f7082a0608f49a8ded053214c605d815a7781f00219c7f8d9eefc5274e803cb338d5bb03"},
 		{"Vote Response with error", &privproto.SignedVoteResponse{Vote: tmproto.Vote{}, Error: remoteError}, "22250a11220212002a0b088092b8c398feffffff0112100801120c697427732061206572726f72"},
-		{"Proposal Request", &privproto.SignProposalRequest{Proposal: proposalpb}, "2a700a6e08011003180220022a4a0a208b01023386c371778ecb6368573e539afc3cc860ec3a2f614e54fe5652f4fc80122608c0843d122072db3d959635dff1bb567bedaa70573392c5159666a3f8caf11e413aac52207a320608f49a8ded053a10697427732061207369676e6174757265"},
-		{"Proposal Response", &privproto.SignedProposalResponse{Proposal: *proposalpb, Error: nil}, "32700a6e08011003180220022a4a0a208b01023386c371778ecb6368573e539afc3cc860ec3a2f614e54fe5652f4fc80122608c0843d122072db3d959635dff1bb567bedaa70573392c5159666a3f8caf11e413aac52207a320608f49a8ded053a10697427732061207369676e6174757265"},
+		{"Proposal Request", &privproto.SignProposalRequest{Proposal: proposalpb}, "2a700a6e08011003180220022a4a0a20aeec33a2b50baa7373b49260a0bb761f91c1d1c98988f799f0a8050df1b686a1122608c0843d12209d2e1eb75bb8d50b7d65c2fd0727a82e6a1d73ab6ff3397ca88cdbe7dbe4f708320608f49a8ded053a10697427732061207369676e6174757265"},
+		{"Proposal Response", &privproto.SignedProposalResponse{Proposal: *proposalpb, Error: nil}, "32700a6e08011003180220022a4a0a20aeec33a2b50baa7373b49260a0bb761f91c1d1c98988f799f0a8050df1b686a1122608c0843d12209d2e1eb75bb8d50b7d65c2fd0727a82e6a1d73ab6ff3397ca88cdbe7dbe4f708320608f49a8ded053a10697427732061207369676e6174757265"},
 		{"Proposal Response with error", &privproto.SignedProposalResponse{Proposal: tmproto.Proposal{}, Error: remoteError}, "32250a112a021200320b088092b8c398feffffff0112100801120c697427732061206572726f72"},
 	}
 

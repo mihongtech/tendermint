@@ -93,7 +93,7 @@ func TestCacheAfterUpdate(t *testing.T) {
 			// >>> sha256('\x02').hexdigest()
 			// 'dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986'
 
-			require.Equal(t, expectedBz, nodeVal, "Equality failed on index %d, tc %d", counter, tcIndex)
+			require.Equal(t, expectedBz, nodeVal[:], "Equality failed on index %d, tc %d", counter, tcIndex)
 			counter++
 			node = node.Next()
 		}
