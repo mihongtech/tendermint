@@ -3,8 +3,8 @@ package mempool
 import (
 	"bytes"
 	"container/list"
-	"crypto/sha256"
 	"fmt"
+	"github.com/tjfoc/gmsm/sm3"
 	"sync"
 	"sync/atomic"
 
@@ -22,7 +22,7 @@ import (
 )
 
 // TxKeySize is the size of the transaction key index
-const TxKeySize = sha256.Size
+const TxKeySize = 32
 
 var newline = []byte("\n")
 
@@ -753,8 +753,10 @@ func (nopTxCache) Remove(types.Tx)    {}
 //--------------------------------------------------------------------------------
 
 // TxKey is the fixed length array hash used as the key in maps.
-func TxKey(tx types.Tx) [TxKeySize]byte {
-	return sha256.Sum256(tx)
+func TxKey(tx types.Tx) (key [TxKeySize]byte) {
+	hash := sm3.Sm3Sum(tx)
+	copy(key[:], hash)
+	return
 }
 
 // txID is a hash of the Tx.

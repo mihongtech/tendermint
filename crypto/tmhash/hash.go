@@ -1,23 +1,23 @@
 package tmhash
 
 import (
-	"crypto/sha256"
+	"github.com/tjfoc/gmsm/sm3"
 	"hash"
 )
 
 const (
-	Size      = sha256.Size
-	BlockSize = sha256.BlockSize
+	Size      = 32
+	BlockSize = 64
 )
 
 // New returns a new hash.Hash.
 func New() hash.Hash {
-	return sha256.New()
+	return sm3.New()
 }
 
 // Sum returns the SHA256 of the bz.
 func Sum(bz []byte) []byte {
-	h := sha256.Sum256(bz)
+	h := sm3.Sm3Sum(bz)
 	return h[:]
 }
 
@@ -54,12 +54,12 @@ func (h sha256trunc) BlockSize() int {
 // NewTruncated returns a new hash.Hash.
 func NewTruncated() hash.Hash {
 	return sha256trunc{
-		sha256: sha256.New(),
+		sha256: sm3.New(),
 	}
 }
 
 // SumTruncated returns the first 20 bytes of SHA256 of the bz.
 func SumTruncated(bz []byte) []byte {
-	hash := sha256.Sum256(bz)
+	hash := sm3.Sm3Sum(bz)
 	return hash[:TruncatedSize]
 }

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"crypto/cipher"
 	crand "crypto/rand"
-	"crypto/sha256"
 	"encoding/binary"
 	"errors"
 	"fmt"
@@ -16,6 +15,7 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	"github.com/gtank/merlin"
 	pool "github.com/libp2p/go-buffer-pool"
+	"github.com/tjfoc/gmsm/sm3"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/curve25519"
 	"golang.org/x/crypto/hkdf"
@@ -338,7 +338,7 @@ func deriveSecrets(
 	dhSecret *[32]byte,
 	locIsLeast bool,
 ) (recvSecret, sendSecret *[aeadKeySize]byte) {
-	hash := sha256.New
+	hash := sm3.New
 	hkdf := hkdf.New(hash, dhSecret[:], nil, secretConnKeyAndChallengeGen)
 	// get enough data for 2 aead keys, and a 32 byte challenge
 	res := new([2*aeadKeySize + 32]byte)

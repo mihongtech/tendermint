@@ -1,11 +1,11 @@
 package crypto
 
 import (
-	"crypto/sha256"
+	"github.com/tjfoc/gmsm/sm3"
 )
 
 func Sha256(bytes []byte) []byte {
-	hasher := sha256.New()
+	hasher := sm3.New()
 	hasher.Write(bytes)
 	return hasher.Sum(nil)
 }

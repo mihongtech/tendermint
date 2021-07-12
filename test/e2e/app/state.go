@@ -2,7 +2,6 @@
 package main
 
 import (
-	"crypto/sha256"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -10,6 +9,8 @@ import (
 	"os"
 	"sort"
 	"sync"
+
+	"github.com/tjfoc/gmsm/sm3"
 )
 
 // State is the application state.
@@ -144,7 +145,7 @@ func hashItems(items map[string]string) []byte {
 	}
 	sort.Strings(keys)
 
-	hasher := sha256.New()
+	hasher := sm3.New()
 	for _, key := range keys {
 		_, _ = hasher.Write([]byte(key))
 		_, _ = hasher.Write([]byte{0})
