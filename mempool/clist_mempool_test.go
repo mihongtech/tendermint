@@ -2,7 +2,6 @@ package mempool
 
 import (
 	"crypto/rand"
-	"crypto/sha256"
 	"encoding/binary"
 	"fmt"
 	"io/ioutil"
@@ -16,6 +15,7 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tjfoc/gmsm/sm3"
 
 	"github.com/tendermint/tendermint/abci/example/counter"
 	"github.com/tendermint/tendermint/abci/example/kvstore"
@@ -661,7 +661,7 @@ func newRemoteApp(
 	return clientCreator, server
 }
 func checksumIt(data []byte) string {
-	h := sha256.New()
+	h := sm3.New()
 	h.Write(data)
 	return fmt.Sprintf("%x", h.Sum(nil))
 }

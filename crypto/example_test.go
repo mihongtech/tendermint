@@ -24,5 +24,5 @@ func ExampleSha256() {
 	sum := crypto.Sha256([]byte("This is Tendermint"))
 	fmt.Printf("%x\n", sum)
 	// Output:
-	// f91afb642f3d1c87c17eb01aae5cb65c242dfdbe7cf1066cc260f4ce5d33b94e
+	// ab617a03d0a63c838b4dfbb2732e95088c66308b4fff74b231471fdba23a338f
 }

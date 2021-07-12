@@ -24,14 +24,14 @@ func TestHashFromByteSlices(t *testing.T) {
 		slices     [][]byte
 		expectHash string // in hex format
 	}{
-		"nil":          {nil, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
-		"empty":        {[][]byte{}, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
-		"single":       {[][]byte{{1, 2, 3}}, "054edec1d0211f624fed0cbca9d4f9400b0e491c43742af2c5b0abebf0c990d8"},
-		"single blank": {[][]byte{{}}, "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"},
-		"two":          {[][]byte{{1, 2, 3}, {4, 5, 6}}, "82e6cfce00453804379b53962939eaa7906b39904be0813fcadd31b100773c4b"},
+		"nil":          {nil, "1ab21d8355cfa17f8e61194831e81a8f22bec8c728fefb747ed035eb5082aa2b"},
+		"empty":        {[][]byte{}, "1ab21d8355cfa17f8e61194831e81a8f22bec8c728fefb747ed035eb5082aa2b"},
+		"single":       {[][]byte{{1, 2, 3}}, "4b41bc3558731767a4b19187a64f8d171878ef5a45bfd73670815c2c66387d75"},
+		"single blank": {[][]byte{{}}, "2daef60e7a0b8f5e024c81cd2ab3109f2b4f155cf83adeb2ae5532f74a157fdf"},
+		"two":          {[][]byte{{1, 2, 3}, {4, 5, 6}}, "f97a1c8fff5fedd243ae80c1c2b08a0c960e4bd5660ad65062a66e4ae523250e"},
 		"many": {
 			[][]byte{{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}},
-			"f326493eceab4f2d9ffbc78c59432a0a005d6ea98392045c74df5d14a113be18",
+			"5d7bf1382f761d7794d2f169362b803dad17d5efaba080c53c0bc256a7408fb5",
 		},
 	}
 	for name, tc := range testcases {
@@ -47,7 +47,7 @@ func TestProof(t *testing.T) {
 
 	// Try an empty proof first
 	rootHash, proofs := ProofsFromByteSlices([][]byte{})
-	require.Equal(t, "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", hex.EncodeToString(rootHash))
+	require.Equal(t, "1ab21d8355cfa17f8e61194831e81a8f22bec8c728fefb747ed035eb5082aa2b", hex.EncodeToString(rootHash))
 	require.Empty(t, proofs)
 
 	total := 100

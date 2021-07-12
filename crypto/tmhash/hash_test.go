@@ -1,11 +1,11 @@
 package tmhash_test
 
 import (
-	"crypto/sha256"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tjfoc/gmsm/sm3"
 
 	"github.com/tendermint/tendermint/crypto/tmhash"
 )
@@ -19,7 +19,7 @@ func TestHash(t *testing.T) {
 
 	bz2 := tmhash.Sum(testVector)
 
-	hasher = sha256.New()
+	hasher = sm3.New()
 	_, err = hasher.Write(testVector)
 	require.NoError(t, err)
 	bz3 := hasher.Sum(nil)
@@ -37,7 +37,7 @@ func TestHashTruncated(t *testing.T) {
 
 	bz2 := tmhash.SumTruncated(testVector)
 
-	hasher = sha256.New()
+	hasher = sm3.New()
 	_, err = hasher.Write(testVector)
 	require.NoError(t, err)
 	bz3 := hasher.Sum(nil)
