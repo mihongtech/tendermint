@@ -10,7 +10,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/tjfoc/gmsm/sm3"
+	c_hash "github.com/lifei/crypto/hash"
 )
 
 // State is the application state.
@@ -145,7 +145,7 @@ func hashItems(items map[string]string) []byte {
 	}
 	sort.Strings(keys)
 
-	hasher := sm3.New()
+	hasher := c_hash.New()
 	for _, key := range keys {
 		_, _ = hasher.Write([]byte(key))
 		_, _ = hasher.Write([]byte{0})

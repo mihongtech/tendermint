@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/tjfoc/gmsm/sm3"
+	c_hash "github.com/lifei/crypto/hash"
 
 	tmsync "github.com/tendermint/tendermint/libs/sync"
 	"github.com/tendermint/tendermint/p2p"
@@ -32,7 +32,7 @@ type snapshot struct {
 // non-deterministic manner. All fields must be equal for the snapshot to be considered the same.
 func (s *snapshot) Key() snapshotKey {
 	// Hash.Write() never returns an error.
-	hasher := sm3.New()
+	hasher := c_hash.New()
 	hasher.Write([]byte(fmt.Sprintf("%v:%v:%v", s.Height, s.Format, s.Chunks)))
 	hasher.Write(s.Hash)
 	hasher.Write(s.Metadata)

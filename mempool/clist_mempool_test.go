@@ -13,9 +13,9 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
+	c_hash "github.com/lifei/crypto/hash"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tjfoc/gmsm/sm3"
 
 	"github.com/tendermint/tendermint/abci/example/counter"
 	"github.com/tendermint/tendermint/abci/example/kvstore"
@@ -661,7 +661,7 @@ func newRemoteApp(
 	return clientCreator, server
 }
 func checksumIt(data []byte) string {
-	h := sm3.New()
+	h := c_hash.New()
 	h.Write(data)
 	return fmt.Sprintf("%x", h.Sum(nil))
 }

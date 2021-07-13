@@ -15,7 +15,7 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	"github.com/gtank/merlin"
 	pool "github.com/libp2p/go-buffer-pool"
-	"github.com/tjfoc/gmsm/sm3"
+	c_hash "github.com/lifei/crypto/hash"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/curve25519"
 	"golang.org/x/crypto/hkdf"
@@ -338,7 +338,7 @@ func deriveSecrets(
 	dhSecret *[32]byte,
 	locIsLeast bool,
 ) (recvSecret, sendSecret *[aeadKeySize]byte) {
-	hash := sm3.New
+	hash := c_hash.New
 	hkdf := hkdf.New(hash, dhSecret[:], nil, secretConnKeyAndChallengeGen)
 	// get enough data for 2 aead keys, and a 32 byte challenge
 	res := new([2*aeadKeySize + 32]byte)

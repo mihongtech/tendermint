@@ -2,7 +2,7 @@ package mempool
 
 import (
 	"crypto/rand"
-	"github.com/tjfoc/gmsm/sm3"
+	c_hash "github.com/lifei/crypto/hash"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -84,7 +84,7 @@ func TestCacheAfterUpdate(t *testing.T) {
 				"cache larger than expected on testcase %d", tcIndex)
 
 			nodeVal := node.Value.([32]byte)
-			expectedBz := sm3.Sm3Sum([]byte{byte(tc.txsInCache[len(tc.txsInCache)-counter-1])})
+			expectedBz := c_hash.Sum([]byte{byte(tc.txsInCache[len(tc.txsInCache)-counter-1])})
 			// Reference for reading the errors:
 			// >>> sha256('\x00').hexdigest()
 			// '6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d'
@@ -93,7 +93,7 @@ func TestCacheAfterUpdate(t *testing.T) {
 			// >>> sha256('\x02').hexdigest()
 			// 'dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986'
 
-			require.Equal(t, expectedBz, nodeVal[:], "Equality failed on index %d, tc %d", counter, tcIndex)
+			require.Equal(t, expectedBz, nodeVal, "Equality failed on index %d, tc %d", counter, tcIndex)
 			counter++
 			node = node.Next()
 		}

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"container/list"
 	"fmt"
-	"github.com/tjfoc/gmsm/sm3"
+	c_hash "github.com/lifei/crypto/hash"
 	"sync"
 	"sync/atomic"
 
@@ -754,9 +754,7 @@ func (nopTxCache) Remove(types.Tx)    {}
 
 // TxKey is the fixed length array hash used as the key in maps.
 func TxKey(tx types.Tx) (key [TxKeySize]byte) {
-	hash := sm3.Sm3Sum(tx)
-	copy(key[:], hash)
-	return
+	return c_hash.Sum(tx)
 }
 
 // txID is a hash of the Tx.
