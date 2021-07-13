@@ -4,7 +4,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/mihongtech/crypto/ed25519"
 	p2pconn "github.com/tendermint/tendermint/p2p/conn"
 )
 

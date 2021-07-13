@@ -15,9 +15,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/merkle"
+	"github.com/mihongtech/crypto/tmhash"
 	"github.com/tendermint/tendermint/libs/bits"
 	"github.com/tendermint/tendermint/libs/bytes"
 	tmrand "github.com/tendermint/tendermint/libs/rand"

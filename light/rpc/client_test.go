@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto/merkle"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
 	"github.com/tendermint/tendermint/libs/bytes"
 	lcmock "github.com/tendermint/tendermint/light/rpc/mocks"
 	tmcrypto "github.com/tendermint/tendermint/proto/tendermint/crypto"

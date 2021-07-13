@@ -15,9 +15,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/tmhash"
 	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
 	"github.com/tendermint/tendermint/evidence"
 	"github.com/tendermint/tendermint/evidence/mocks"
 	"github.com/tendermint/tendermint/libs/log"

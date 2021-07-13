@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"time"
 
+	"github.com/mihongtech/crypto/merkle"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tendermint/proxy"
 	sm "github.com/tendermint/tendermint/state"

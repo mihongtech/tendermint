@@ -3,8 +3,8 @@ package pex
 import (
 	"net"
 
+	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tendermint/libs/service"
 	"github.com/tendermint/tendermint/p2p"

@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/ed25519"
+	"github.com/mihongtech/crypto/tmhash"
 	"github.com/tendermint/tendermint/libs/protoio"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

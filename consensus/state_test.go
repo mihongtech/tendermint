@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/mihongtech/crypto/tmhash"
 	"github.com/tendermint/tendermint/abci/example/counter"
 	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/crypto/tmhash"
 	"github.com/tendermint/tendermint/libs/log"
 	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
 	tmrand "github.com/tendermint/tendermint/libs/rand"

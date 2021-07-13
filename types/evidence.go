@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mihongtech/crypto/merkle"
+	"github.com/mihongtech/crypto/tmhash"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

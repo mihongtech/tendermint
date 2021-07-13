@@ -13,10 +13,10 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto/ed25519"
+	cryptoenc "github.com/mihongtech/crypto/encoding"
 	abci "github.com/tendermint/tendermint/abci/types"
 	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

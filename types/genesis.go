@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/mihongtech/crypto"
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmos "github.com/tendermint/tendermint/libs/os"

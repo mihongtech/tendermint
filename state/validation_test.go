@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
+	"github.com/mihongtech/crypto/ed25519"
+	"github.com/mihongtech/crypto/tmhash"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
 	"github.com/tendermint/tendermint/libs/log"
 	memmock "github.com/tendermint/tendermint/mempool/mock"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

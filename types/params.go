@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/mihongtech/crypto/tmhash"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/tmhash"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 

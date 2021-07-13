@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/tendermint/tendermint/crypto/merkle"
+	"github.com/mihongtech/crypto/merkle"
 	"github.com/tendermint/tendermint/libs/bits"
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmjson "github.com/tendermint/tendermint/libs/json"

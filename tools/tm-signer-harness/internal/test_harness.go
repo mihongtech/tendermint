@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto/tmhash"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/privval"
 	"github.com/tendermint/tendermint/state"
 

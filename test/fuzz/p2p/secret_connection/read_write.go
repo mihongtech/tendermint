@@ -6,7 +6,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/async"
 	sc "github.com/tendermint/tendermint/p2p/conn"
 )

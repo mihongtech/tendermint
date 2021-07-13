@@ -1,11 +1,11 @@
 package types
 
 import (
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/ed25519"
+	cryptoenc "github.com/mihongtech/crypto/encoding"
+	"github.com/mihongtech/crypto/secp256k1"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 

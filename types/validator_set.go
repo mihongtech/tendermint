@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/tendermint/tendermint/crypto/merkle"
+	"github.com/mihongtech/crypto/merkle"
 	tmmath "github.com/tendermint/tendermint/libs/math"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

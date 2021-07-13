@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto/tmhash"
 	tmtime "github.com/tendermint/tendermint/types/time"
 )
 

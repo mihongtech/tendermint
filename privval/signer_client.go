@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
+	"github.com/mihongtech/crypto"
+	cryptoenc "github.com/mihongtech/crypto/encoding"
 	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	"github.com/tendermint/tendermint/types"

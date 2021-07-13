@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto/tmhash"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 )
 

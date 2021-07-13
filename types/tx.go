@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
+	"github.com/mihongtech/crypto/merkle"
+	"github.com/mihongtech/crypto/tmhash"
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

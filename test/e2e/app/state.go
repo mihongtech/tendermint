@@ -10,7 +10,7 @@ import (
 	"sort"
 	"sync"
 
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 )
 
 // State is the application state.

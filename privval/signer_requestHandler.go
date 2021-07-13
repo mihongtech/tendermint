@@ -3,8 +3,8 @@ package privval
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
+	"github.com/mihongtech/crypto"
+	cryptoenc "github.com/mihongtech/crypto/encoding"
 	cryptoproto "github.com/tendermint/tendermint/proto/tendermint/crypto"
 	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

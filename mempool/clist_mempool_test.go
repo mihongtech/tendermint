@@ -13,7 +13,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	gogotypes "github.com/gogo/protobuf/types"
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 

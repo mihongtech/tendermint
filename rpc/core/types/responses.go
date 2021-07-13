@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
+	"github.com/mihongtech/crypto"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/libs/bytes"
 	"github.com/tendermint/tendermint/p2p"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

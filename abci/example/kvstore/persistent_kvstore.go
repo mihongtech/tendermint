@@ -9,9 +9,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/tendermint/tendermint/abci/example/code"
 	"github.com/tendermint/tendermint/abci/types"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
 	"github.com/tendermint/tendermint/libs/log"
 	pc "github.com/tendermint/tendermint/proto/tendermint/crypto"
 )

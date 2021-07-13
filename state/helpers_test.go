@@ -7,9 +7,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/ed25519"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

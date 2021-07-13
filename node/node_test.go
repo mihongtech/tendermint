@@ -14,9 +14,9 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/abci/example/kvstore"
 	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	"github.com/tendermint/tendermint/evidence"
 	"github.com/tendermint/tendermint/libs/log"
 	tmrand "github.com/tendermint/tendermint/libs/rand"

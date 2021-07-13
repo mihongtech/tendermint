@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
+	cryptoenc "github.com/mihongtech/crypto/encoding"
 	abci "github.com/tendermint/tendermint/abci/types"
-	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
 	"github.com/tendermint/tendermint/libs/fail"
 	"github.com/tendermint/tendermint/libs/log"
 	mempl "github.com/tendermint/tendermint/mempool"

@@ -4,10 +4,7 @@ go 1.15
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d
 	github.com/Workiva/go-datastructures v1.0.52
-	github.com/btcsuite/btcd v0.21.0-beta
-	github.com/btcsuite/btcutil v1.0.2
 	github.com/confio/ics23/go v0.6.3
 	github.com/cosmos/iavl v0.15.3
 	github.com/fortytw2/leaktest v1.3.0
@@ -19,7 +16,7 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/gtank/merlin v0.1.1
 	github.com/libp2p/go-buffer-pool v0.0.2
-	github.com/lifei/crypto v0.0.0-00010101000000-000000000000
+	github.com/mihongtech/crypto v0.0.0-20210713081430-c9a4db655837
 	github.com/minio/highwayhash v1.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.8.0
@@ -31,9 +28,9 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.7.0
 	github.com/tendermint/tm-db v0.6.4
-	golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9
-	golang.org/x/net v0.0.0-20201021035429-f5854403a974
+	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
+	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	google.golang.org/grpc v1.37.0
 )
 
-replace github.com/lifei/crypto => ./../../lifei/crypto
+replace github.com/cosmos/iavl => ./../../cosmos/iavl

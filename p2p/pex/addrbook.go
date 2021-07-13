@@ -16,7 +16,7 @@ import (
 
 	"github.com/minio/highwayhash"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/mihongtech/crypto"
 	tmmath "github.com/tendermint/tendermint/libs/math"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	"github.com/tendermint/tendermint/libs/service"

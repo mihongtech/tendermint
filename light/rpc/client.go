@@ -10,8 +10,8 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
+	"github.com/mihongtech/crypto/merkle"
 	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmmath "github.com/tendermint/tendermint/libs/math"
 	service "github.com/tendermint/tendermint/libs/service"

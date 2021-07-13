@@ -18,13 +18,13 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto"
 	abci "github.com/tendermint/tendermint/abci/types"
 	bcv0 "github.com/tendermint/tendermint/blockchain/v0"
 	bcv1 "github.com/tendermint/tendermint/blockchain/v1"
 	bcv2 "github.com/tendermint/tendermint/blockchain/v2"
 	cfg "github.com/tendermint/tendermint/config"
 	"github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/evidence"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	"github.com/tendermint/tendermint/libs/log"

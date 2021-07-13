@@ -11,9 +11,9 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
+	"github.com/mihongtech/crypto"
 	cfg "github.com/tendermint/tendermint/config"
 	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/crypto"
 	tmevents "github.com/tendermint/tendermint/libs/events"
 	"github.com/tendermint/tendermint/libs/fail"
 	tmjson "github.com/tendermint/tendermint/libs/json"

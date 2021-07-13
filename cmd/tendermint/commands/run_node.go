@@ -7,7 +7,7 @@ import (
 	"io"
 	"os"
 
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 	"github.com/spf13/cobra"
 	cfg "github.com/tendermint/tendermint/config"
 	tmos "github.com/tendermint/tendermint/libs/os"

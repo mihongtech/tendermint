@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tendermint/tendermint/crypto"
-	ce "github.com/tendermint/tendermint/crypto/encoding"
+	"github.com/mihongtech/crypto"
+	ce "github.com/mihongtech/crypto/encoding"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

@@ -2,7 +2,7 @@ package mempool
 
 import (
 	"crypto/rand"
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 	"testing"
 
 	"github.com/stretchr/testify/require"

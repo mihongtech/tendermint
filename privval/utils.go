@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 	tmnet "github.com/tendermint/tendermint/libs/net"
 )

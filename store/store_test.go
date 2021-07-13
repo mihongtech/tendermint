@@ -14,8 +14,8 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
+	"github.com/mihongtech/crypto"
 	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/libs/log"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmstore "github.com/tendermint/tendermint/proto/tendermint/store"

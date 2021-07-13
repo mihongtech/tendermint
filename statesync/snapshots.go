@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 
 	tmsync "github.com/tendermint/tendermint/libs/sync"
 	"github.com/tendermint/tendermint/p2p"

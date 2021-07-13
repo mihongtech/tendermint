@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"container/list"
 	"fmt"
-	c_hash "github.com/lifei/crypto/hash"
+	c_hash "github.com/mihongtech/crypto/hash"
 	"sync"
 	"sync/atomic"
 
