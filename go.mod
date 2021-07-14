@@ -6,7 +6,6 @@ require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Workiva/go-datastructures v1.0.52
 	github.com/confio/ics23/go v0.6.3
-	github.com/cosmos/iavl v0.15.3
 	github.com/fortytw2/leaktest v1.3.0
 	github.com/go-kit/kit v0.10.0
 	github.com/go-logfmt/logfmt v0.5.0
@@ -17,6 +16,7 @@ require (
 	github.com/gtank/merlin v0.1.1
 	github.com/libp2p/go-buffer-pool v0.0.2
 	github.com/mihongtech/crypto v0.0.0-20210713081430-c9a4db655837
+	github.com/mihongtech/iavl v0.0.0-20210713090747-d793fb28ccd4
 	github.com/minio/highwayhash v1.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.8.0
@@ -32,5 +32,3 @@ require (
 	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	google.golang.org/grpc v1.37.0
 )
-
-replace github.com/cosmos/iavl => ./../../cosmos/iavl
