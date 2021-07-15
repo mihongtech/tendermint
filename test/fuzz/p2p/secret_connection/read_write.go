@@ -3,10 +3,10 @@ package secretconnection
 import (
 	"bytes"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"io"
 	"log"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/async"
 	sc "github.com/tendermint/tendermint/p2p/conn"
 )
@@ -56,9 +56,9 @@ func makeKVStoreConnPair() (fooConn, barConn kvstoreConn) {
 func makeSecretConnPair() (fooSecConn, barSecConn *sc.SecretConnection) {
 	var (
 		fooConn, barConn = makeKVStoreConnPair()
-		fooPrvKey        = ed25519.GenPrivKey()
+		fooPrvKey        = signature.GenPrivKey()
 		fooPubKey        = fooPrvKey.PubKey()
-		barPrvKey        = ed25519.GenPrivKey()
+		barPrvKey        = signature.GenPrivKey()
 		barPubKey        = barPrvKey.PubKey()
 	)
 

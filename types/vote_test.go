@@ -1,6 +1,7 @@
 package types
 
 import (
+	"github.com/mihongtech/crypto/signature"
 	"testing"
 	"time"
 
@@ -9,7 +10,6 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/mihongtech/crypto/tmhash"
 	"github.com/tendermint/tendermint/libs/protoio"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
@@ -206,7 +206,7 @@ func TestVoteVerify(t *testing.T) {
 	vote := examplePrevote()
 	vote.ValidatorAddress = pubkey.Address()
 
-	err = vote.Verify("test_chain_id", ed25519.GenPrivKey().PubKey())
+	err = vote.Verify("test_chain_id", signature.GenPrivKey().PubKey())
 	if assert.Error(t, err) {
 		assert.Equal(t, ErrVoteInvalidValidatorAddress, err)
 	}

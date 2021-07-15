@@ -2,6 +2,7 @@ package p2p
 
 import (
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"math/rand"
 	"net"
 	"reflect"
@@ -10,7 +11,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/protoio"
 	"github.com/tendermint/tendermint/p2p/conn"
 	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
@@ -38,7 +38,7 @@ func TestTransportMultiplexConnFilter(t *testing.T) {
 	mt := newMultiplexTransport(
 		emptyNodeInfo(),
 		NodeKey{
-			PrivKey: ed25519.GenPrivKey(),
+			PrivKey: signature.GenPrivKey(),
 		},
 	)
 	id := mt.nodeKey.ID()
@@ -92,7 +92,7 @@ func TestTransportMultiplexConnFilterTimeout(t *testing.T) {
 	mt := newMultiplexTransport(
 		emptyNodeInfo(),
 		NodeKey{
-			PrivKey: ed25519.GenPrivKey(),
+			PrivKey: signature.GenPrivKey(),
 		},
 	)
 	id := mt.nodeKey.ID()
@@ -138,7 +138,7 @@ func TestTransportMultiplexConnFilterTimeout(t *testing.T) {
 }
 
 func TestTransportMultiplexMaxIncomingConnections(t *testing.T) {
-	pv := ed25519.GenPrivKey()
+	pv := signature.GenPrivKey()
 	id := PubKeyToID(pv.PubKey())
 	mt := newMultiplexTransport(
 		testNodeInfo(
@@ -242,7 +242,7 @@ func TestTransportMultiplexAcceptMultiple(t *testing.T) {
 
 func testDialer(dialAddr NetAddress, errc chan error) {
 	var (
-		pv     = ed25519.GenPrivKey()
+		pv     = signature.GenPrivKey()
 		dialer = newMultiplexTransport(
 			testNodeInfo(PubKeyToID(pv.PubKey()), defaultNodeName),
 			NodeKey{
@@ -265,7 +265,7 @@ func TestTransportMultiplexAcceptNonBlocking(t *testing.T) {
 	mt := testSetupMultiplexTransport(t)
 
 	var (
-		fastNodePV   = ed25519.GenPrivKey()
+		fastNodePV   = signature.GenPrivKey()
 		fastNodeInfo = testNodeInfo(PubKeyToID(fastNodePV.PubKey()), "fastnode")
 		errc         = make(chan error)
 		fastc        = make(chan struct{})
@@ -299,7 +299,7 @@ func TestTransportMultiplexAcceptNonBlocking(t *testing.T) {
 			errc <- fmt.Errorf("fast peer timed out")
 		}
 
-		sc, err := upgradeSecretConn(c, 200*time.Millisecond, ed25519.GenPrivKey())
+		sc, err := upgradeSecretConn(c, 200*time.Millisecond, signature.GenPrivKey())
 		if err != nil {
 			errc <- err
 			return
@@ -307,7 +307,7 @@ func TestTransportMultiplexAcceptNonBlocking(t *testing.T) {
 
 		_, err = handshake(sc, 200*time.Millisecond,
 			testNodeInfo(
-				PubKeyToID(ed25519.GenPrivKey().PubKey()),
+				PubKeyToID(signature.GenPrivKey().PubKey()),
 				"slow_peer",
 			))
 		if err != nil {
@@ -361,7 +361,7 @@ func TestTransportMultiplexValidateNodeInfo(t *testing.T) {
 
 	go func() {
 		var (
-			pv     = ed25519.GenPrivKey()
+			pv     = signature.GenPrivKey()
 			dialer = newMultiplexTransport(
 				testNodeInfo(PubKeyToID(pv.PubKey()), ""), // Should not be empty
 				NodeKey{
@@ -403,10 +403,10 @@ func TestTransportMultiplexRejectMissmatchID(t *testing.T) {
 	go func() {
 		dialer := newMultiplexTransport(
 			testNodeInfo(
-				PubKeyToID(ed25519.GenPrivKey().PubKey()), "dialer",
+				PubKeyToID(signature.GenPrivKey().PubKey()), "dialer",
 			),
 			NodeKey{
-				PrivKey: ed25519.GenPrivKey(),
+				PrivKey: signature.GenPrivKey(),
 			},
 		)
 		addr := NewNetAddress(mt.nodeKey.ID(), mt.listener.Addr())
@@ -438,7 +438,7 @@ func TestTransportMultiplexDialRejectWrongID(t *testing.T) {
 	mt := testSetupMultiplexTransport(t)
 
 	var (
-		pv     = ed25519.GenPrivKey()
+		pv     = signature.GenPrivKey()
 		dialer = newMultiplexTransport(
 			testNodeInfo(PubKeyToID(pv.PubKey()), ""), // Should not be empty
 			NodeKey{
@@ -447,7 +447,7 @@ func TestTransportMultiplexDialRejectWrongID(t *testing.T) {
 		)
 	)
 
-	wrongID := PubKeyToID(ed25519.GenPrivKey().PubKey())
+	wrongID := PubKeyToID(signature.GenPrivKey().PubKey())
 	addr := NewNetAddress(wrongID, mt.listener.Addr())
 
 	_, err := dialer.Dial(*addr, peerConfig{})
@@ -470,7 +470,7 @@ func TestTransportMultiplexRejectIncompatible(t *testing.T) {
 
 	go func() {
 		var (
-			pv     = ed25519.GenPrivKey()
+			pv     = signature.GenPrivKey()
 			dialer = newMultiplexTransport(
 				testNodeInfoWithNetwork(PubKeyToID(pv.PubKey()), "dialer", "incompatible-network"),
 				NodeKey{
@@ -570,7 +570,7 @@ func TestTransportHandshake(t *testing.T) {
 	}
 
 	var (
-		peerPV       = ed25519.GenPrivKey()
+		peerPV       = signature.GenPrivKey()
 		peerNodeInfo = testNodeInfo(PubKeyToID(peerPV.PubKey()), defaultNodeName)
 	)
 
@@ -625,7 +625,7 @@ func TestTransportAddChannel(t *testing.T) {
 	mt := newMultiplexTransport(
 		emptyNodeInfo(),
 		NodeKey{
-			PrivKey: ed25519.GenPrivKey(),
+			PrivKey: signature.GenPrivKey(),
 		},
 	)
 	testChannel := byte(0x01)
@@ -639,7 +639,7 @@ func TestTransportAddChannel(t *testing.T) {
 // create listener
 func testSetupMultiplexTransport(t *testing.T) *MultiplexTransport {
 	var (
-		pv = ed25519.GenPrivKey()
+		pv = signature.GenPrivKey()
 		id = PubKeyToID(pv.PubKey())
 		mt = newMultiplexTransport(
 			testNodeInfo(

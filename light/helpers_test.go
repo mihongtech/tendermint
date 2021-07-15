@@ -1,10 +1,10 @@
 package light_test
 
 import (
+	"github.com/mihongtech/crypto/signature"
 	"time"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/mihongtech/crypto/tmhash"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
@@ -26,7 +26,7 @@ type privKeys []crypto.PrivKey
 func genPrivKeys(n int) privKeys {
 	res := make(privKeys, n)
 	for i := range res {
-		res[i] = ed25519.GenPrivKey()
+		res[i] = signature.GenPrivKey()
 	}
 	return res
 }
@@ -35,7 +35,7 @@ func genPrivKeys(n int) privKeys {
 // func (pkz privKeys) Change(i int) privKeys {
 // 	res := make(privKeys, len(pkz))
 // 	copy(res, pkz)
-// 	res[i] = ed25519.GenPrivKey()
+// 	res[i] = signature.GenPrivKey()
 // 	return res
 // }
 

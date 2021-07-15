@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 
@@ -54,7 +54,7 @@ type MockPV struct {
 }
 
 func NewMockPV() MockPV {
-	return MockPV{ed25519.GenPrivKey(), false, false}
+	return MockPV{signature.GenPrivKey(), false, false}
 }
 
 // NewMockPVWithParams allows one to create a MockPV instance, but with finer
@@ -141,5 +141,5 @@ func (pv *ErroringMockPV) SignProposal(chainID string, proposal *tmproto.Proposa
 // NewErroringMockPV returns a MockPV that fails on each signing request. Again, for testing only.
 
 func NewErroringMockPV() *ErroringMockPV {
-	return &ErroringMockPV{MockPV{ed25519.GenPrivKey(), false, false}}
+	return &ErroringMockPV{MockPV{signature.GenPrivKey(), false, false}}
 }

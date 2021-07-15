@@ -3,6 +3,7 @@ package node
 import (
 	"context"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"net"
 	"os"
 	"syscall"
@@ -14,7 +15,6 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/abci/example/kvstore"
 	cfg "github.com/tendermint/tendermint/config"
 	"github.com/tendermint/tendermint/evidence"
@@ -139,7 +139,7 @@ func TestNodeSetPrivValTCP(t *testing.T) {
 	defer os.RemoveAll(config.RootDir)
 	config.BaseConfig.PrivValidatorListenAddr = addr
 
-	dialer := privval.DialTCPFn(addr, 100*time.Millisecond, ed25519.GenPrivKey())
+	dialer := privval.DialTCPFn(addr, 100*time.Millisecond, signature.GenPrivKey())
 	dialerEndpoint := privval.NewSignerDialerEndpoint(
 		log.TestingLogger(),
 		dialer,

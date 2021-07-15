@@ -3,9 +3,9 @@ package privval
 import (
 	"errors"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"net"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 	tmnet "github.com/tendermint/tendermint/libs/net"
 )
@@ -39,7 +39,7 @@ func NewSignerListener(listenAddr string, logger log.Logger) (*SignerListenerEnd
 		listener = NewUnixListener(ln)
 	case "tcp":
 		// TODO: persist this key so external signer can actually authenticate us
-		listener = NewTCPListener(ln, ed25519.GenPrivKey())
+		listener = NewTCPListener(ln, signature.GenPrivKey())
 	default:
 		return nil, fmt.Errorf(
 			"wrong listen address: expected either 'tcp' or 'unix' protocols, got %s",

@@ -2,6 +2,7 @@ package privval
 
 import (
 	"encoding/hex"
+	"github.com/mihongtech/crypto/signature"
 	"testing"
 	"time"
 
@@ -9,7 +10,6 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/mihongtech/crypto/tmhash"
 	cryptoproto "github.com/tendermint/tendermint/proto/tendermint/crypto"
@@ -59,7 +59,7 @@ func exampleProposal() *types.Proposal {
 
 // nolint:lll // ignore line length for tests
 func TestPrivvalVectors(t *testing.T) {
-	pk := ed25519.GenPrivKeyFromSecret([]byte("it's a secret")).PubKey()
+	pk := signature.GenPrivKeyFromSecret([]byte("it's a secret")).PubKey()
 	ppk, err := cryptoenc.PubKeyToProto(pk)
 	require.NoError(t, err)
 

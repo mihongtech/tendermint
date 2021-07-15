@@ -1,19 +1,19 @@
 package types
 
 import (
+	"github.com/mihongtech/crypto/signature"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 
 func TestABCIPubKey(t *testing.T) {
-	pkEd := ed25519.GenPrivKey().PubKey()
+	pkEd := signature.GenPrivKey().PubKey()
 	err := testABCIPubKey(t, pkEd, ABCIPubKeyTypeEd25519)
 	assert.NoError(t, err)
 }
@@ -28,7 +28,7 @@ func testABCIPubKey(t *testing.T, pk crypto.PubKey, typeStr string) error {
 }
 
 func TestABCIValidators(t *testing.T) {
-	pkEd := ed25519.GenPrivKey().PubKey()
+	pkEd := signature.GenPrivKey().PubKey()
 
 	// correct validator
 	tmValExpected := NewValidator(pkEd, 10)
@@ -70,7 +70,7 @@ func (pubKeyEddie) String() string                              { return "" }
 func (pubKeyEddie) Type() string                                { return "pubKeyEddie" }
 
 func TestABCIValidatorFromPubKeyAndPower(t *testing.T) {
-	pubkey := ed25519.GenPrivKey().PubKey()
+	pubkey := signature.GenPrivKey().PubKey()
 
 	abciVal := TM2PB.NewValidatorUpdate(pubkey, 10)
 	assert.Equal(t, int64(10), abciVal.Power)
@@ -80,7 +80,7 @@ func TestABCIValidatorFromPubKeyAndPower(t *testing.T) {
 }
 
 func TestABCIValidatorWithoutPubKey(t *testing.T) {
-	pkEd := ed25519.GenPrivKey().PubKey()
+	pkEd := signature.GenPrivKey().PubKey()
 
 	abciVal := TM2PB.Validator(NewValidator(pkEd, 10))
 

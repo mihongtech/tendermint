@@ -7,14 +7,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mihongtech/crypto/ed25519"
+	"github.com/mihongtech/crypto"
+	"github.com/mihongtech/crypto/signature"
 )
 
 //-------------------------------------------
 // helper funcs
 
-func newPrivKey() ed25519.PrivKey {
-	return ed25519.GenPrivKey()
+func newPrivKey() crypto.PrivKey {
+	return signature.GenPrivKey()
 }
 
 //-------------------------------------------

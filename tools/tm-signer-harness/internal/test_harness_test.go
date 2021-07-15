@@ -2,6 +2,7 @@ package internal
 
 import (
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -11,7 +12,6 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tendermint/privval"
 	"github.com/tendermint/tendermint/types"
@@ -97,7 +97,7 @@ func TestRemoteSignerPublicKeyCheckFailed(t *testing.T) {
 	harnessTest(
 		t,
 		func(th *TestHarness) *privval.SignerServer {
-			return newMockSignerServer(t, th, ed25519.GenPrivKey(), false, false)
+			return newMockSignerServer(t, th, signature.GenPrivKey(), false, false)
 		},
 		ErrTestPublicKeyFailed,
 	)
@@ -137,7 +137,7 @@ func newMockSignerServer(
 		privval.DialTCPFn(
 			th.addr,
 			time.Duration(defaultConnDeadline)*time.Millisecond,
-			ed25519.GenPrivKey(),
+			signature.GenPrivKey(),
 		),
 	)
 
@@ -175,7 +175,7 @@ func makeConfig(t *testing.T, acceptDeadline, acceptRetries int) TestHarnessConf
 		AcceptDeadline:   time.Duration(acceptDeadline) * time.Millisecond,
 		ConnDeadline:     time.Duration(defaultConnDeadline) * time.Millisecond,
 		AcceptRetries:    acceptRetries,
-		SecretConnKey:    ed25519.GenPrivKey(),
+		SecretConnKey:    signature.GenPrivKey(),
 		ExitWhenComplete: false,
 	}
 }

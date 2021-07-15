@@ -1,9 +1,9 @@
 package pex
 
 import (
+	"github.com/mihongtech/crypto/signature"
 	"net"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/config"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tendermint/libs/service"
@@ -55,7 +55,7 @@ func newFuzzPeer() *fuzzPeer {
 	return fp
 }
 
-var privKey = ed25519.GenPrivKey()
+var privKey = signature.GenPrivKey()
 var nodeID = p2p.PubKeyToID(privKey.PubKey())
 var defaultNodeInfo = p2p.DefaultNodeInfo{
 	ProtocolVersion: p2p.NewProtocolVersion(

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+	"github.com/mihongtech/crypto/signature"
 	"github.com/tendermint/tendermint/libs/log"
 	tmnet "github.com/tendermint/tendermint/libs/net"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
@@ -182,7 +182,7 @@ func MakeSwitch(
 ) *Switch {
 
 	nodeKey := NodeKey{
-		PrivKey: ed25519.GenPrivKey(),
+		PrivKey: signature.GenPrivKey(),
 	}
 	nodeInfo := testNodeInfo(nodeKey.ID(), fmt.Sprintf("node%d", i))
 	addr, err := NewNetAddressString(

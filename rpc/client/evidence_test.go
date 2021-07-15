@@ -9,7 +9,6 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/mihongtech/crypto/ed25519"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/mihongtech/crypto/tmhash"
 	abci "github.com/tendermint/tendermint/abci/types"
@@ -132,7 +131,7 @@ func TestBroadcastEvidence_DuplicateVoteEvidence(t *testing.T) {
 		err = client.WaitForHeight(c, status.SyncInfo.LatestBlockHeight+2, nil)
 		require.NoError(t, err)
 
-		ed25519pub := pv.Key.PubKey.(ed25519.PubKey)
+		ed25519pub := pv.Key.PubKey
 		rawpub := ed25519pub.Bytes()
 		result2, err := c.ABCIQuery(context.Background(), "/val", rawpub)
 		require.NoError(t, err)

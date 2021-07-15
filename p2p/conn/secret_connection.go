@@ -7,6 +7,7 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"io"
 	"math"
 	"net"
@@ -22,7 +23,6 @@ import (
 	"golang.org/x/crypto/nacl/box"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/tendermint/tendermint/libs/async"
 	"github.com/tendermint/tendermint/libs/protoio"
@@ -167,8 +167,8 @@ func MakeSecretConnection(conn io.ReadWriteCloser, locPrivKey crypto.PrivKey) (*
 	}
 
 	remPubKey, remSignature := authSigMsg.Key, authSigMsg.Sig
-	if _, ok := remPubKey.(ed25519.PubKey); !ok {
-		return nil, fmt.Errorf("expected ed25519 pubkey, got %T", remPubKey)
+	if ok := signature.IsCurrentPubKey(remPubKey); !ok {
+		return nil, fmt.Errorf("expected current pubkey type, got %T", remPubKey)
 	}
 	if !remPubKey.VerifySignature(challenge[:], remSignature) {
 		return nil, errors.New("challenge verification failed")

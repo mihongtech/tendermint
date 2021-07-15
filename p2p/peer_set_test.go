@@ -1,13 +1,13 @@
 package p2p
 
 import (
+	"github.com/mihongtech/crypto/signature"
 	"net"
 	"sync"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/service"
 )
 
@@ -38,7 +38,7 @@ func newMockPeer(ip net.IP) *mockPeer {
 	if ip == nil {
 		ip = net.IP{127, 0, 0, 1}
 	}
-	nodeKey := NodeKey{PrivKey: ed25519.GenPrivKey()}
+	nodeKey := NodeKey{PrivKey: signature.GenPrivKey()}
 	return &mockPeer{
 		ip: ip,
 		id: nodeKey.ID(),

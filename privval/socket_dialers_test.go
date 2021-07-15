@@ -2,13 +2,12 @@ package privval
 
 import (
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-
-	"github.com/mihongtech/crypto/ed25519"
 )
 
 func getDialerTestCases(t *testing.T) []dialerTestCase {
@@ -20,7 +19,7 @@ func getDialerTestCases(t *testing.T) []dialerTestCase {
 	return []dialerTestCase{
 		{
 			addr:   tcpAddr,
-			dialer: DialTCPFn(tcpAddr, testTimeoutReadWrite, ed25519.GenPrivKey()),
+			dialer: DialTCPFn(tcpAddr, testTimeoutReadWrite, signature.GenPrivKey()),
 		},
 		{
 			addr:   unixAddr,
@@ -32,7 +31,7 @@ func getDialerTestCases(t *testing.T) []dialerTestCase {
 func TestIsConnTimeoutForFundamentalTimeouts(t *testing.T) {
 	// Generate a networking timeout
 	tcpAddr := GetFreeLocalhostAddrPort()
-	dialer := DialTCPFn(tcpAddr, time.Millisecond, ed25519.GenPrivKey())
+	dialer := DialTCPFn(tcpAddr, time.Millisecond, signature.GenPrivKey())
 	_, err := dialer()
 	assert.Error(t, err)
 	assert.True(t, IsConnTimeout(err))
@@ -40,7 +39,7 @@ func TestIsConnTimeoutForFundamentalTimeouts(t *testing.T) {
 
 func TestIsConnTimeoutForWrappedConnTimeouts(t *testing.T) {
 	tcpAddr := GetFreeLocalhostAddrPort()
-	dialer := DialTCPFn(tcpAddr, time.Millisecond, ed25519.GenPrivKey())
+	dialer := DialTCPFn(tcpAddr, time.Millisecond, signature.GenPrivKey())
 	_, err := dialer()
 	assert.Error(t, err)
 	err = fmt.Errorf("%v: %w", err, ErrConnectionTimeout)

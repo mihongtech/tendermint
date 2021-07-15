@@ -2,6 +2,7 @@ package state_test
 
 import (
 	"context"
+	"github.com/mihongtech/crypto/signature"
 	"testing"
 	"time"
 
@@ -10,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/mihongtech/crypto/tmhash"
 	abci "github.com/tendermint/tendermint/abci/types"
@@ -215,8 +216,8 @@ func TestBeginBlockByzantineValidators(t *testing.T) {
 }
 
 func TestValidateValidatorUpdates(t *testing.T) {
-	pubkey1 := ed25519.GenPrivKey().PubKey()
-	pubkey2 := ed25519.GenPrivKey().PubKey()
+	pubkey1 := signature.GenPrivKey().PubKey()
+	pubkey2 := signature.GenPrivKey().PubKey()
 	pk1, err := cryptoenc.PubKeyToProto(pubkey1)
 	assert.NoError(t, err)
 	pk2, err := cryptoenc.PubKeyToProto(pubkey2)
@@ -272,9 +273,9 @@ func TestValidateValidatorUpdates(t *testing.T) {
 }
 
 func TestUpdateValidators(t *testing.T) {
-	pubkey1 := ed25519.GenPrivKey().PubKey()
+	pubkey1 := signature.GenPrivKey().PubKey()
 	val1 := types.NewValidator(pubkey1, 10)
-	pubkey2 := ed25519.GenPrivKey().PubKey()
+	pubkey2 := signature.GenPrivKey().PubKey()
 	val2 := types.NewValidator(pubkey2, 20)
 
 	pk, err := cryptoenc.PubKeyToProto(pubkey1)
@@ -381,7 +382,7 @@ func TestEndBlockValidatorUpdates(t *testing.T) {
 	block := makeBlock(state, 1)
 	blockID := types.BlockID{Hash: block.Hash(), PartSetHeader: block.MakePartSet(testPartSize).Header()}
 
-	pubkey := ed25519.GenPrivKey().PubKey()
+	pubkey := signature.GenPrivKey().PubKey()
 	pk, err := cryptoenc.PubKeyToProto(pubkey)
 	require.NoError(t, err)
 	app.ValidatorUpdates = []abci.ValidatorUpdate{

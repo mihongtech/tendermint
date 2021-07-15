@@ -2,6 +2,7 @@ package state_test
 
 import (
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"os"
 	"testing"
 
@@ -11,7 +12,6 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	abci "github.com/tendermint/tendermint/abci/types"
 	cfg "github.com/tendermint/tendermint/config"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
@@ -108,7 +108,7 @@ func TestPruneStates(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			db := dbm.NewMemDB()
 			stateStore := sm.NewStore(db)
-			pk := ed25519.GenPrivKey().PubKey()
+			pk := signature.GenPrivKey().PubKey()
 
 			// Generate a bunch of state data. Validators change for heights ending with 3, and
 			// parameters when ending with 5.

@@ -32,3 +32,5 @@ require (
 	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	google.golang.org/grpc v1.37.0
 )
+
+replace github.com/mihongtech/crypto => ./../../mihongtech/crypto

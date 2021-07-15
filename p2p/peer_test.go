@@ -2,6 +2,7 @@ package p2p
 
 import (
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	golog "log"
 	"net"
 	"testing"
@@ -11,7 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+
 	"github.com/tendermint/tendermint/libs/bytes"
 	"github.com/tendermint/tendermint/libs/log"
 
@@ -23,7 +24,7 @@ func TestPeerBasic(t *testing.T) {
 	assert, require := assert.New(t), require.New(t)
 
 	// simulate remote peer
-	rp := &remotePeer{PrivKey: ed25519.GenPrivKey(), Config: cfg}
+	rp := &remotePeer{PrivKey: signature.GenPrivKey(), Config: cfg}
 	rp.Start()
 	t.Cleanup(rp.Stop)
 
@@ -53,7 +54,7 @@ func TestPeerSend(t *testing.T) {
 	config := cfg
 
 	// simulate remote peer
-	rp := &remotePeer{PrivKey: ed25519.GenPrivKey(), Config: config}
+	rp := &remotePeer{PrivKey: signature.GenPrivKey(), Config: config}
 	rp.Start()
 	t.Cleanup(rp.Stop)
 
@@ -82,7 +83,7 @@ func createOutboundPeerAndPerformHandshake(
 		{ID: testCh, Priority: 1},
 	}
 	reactorsByCh := map[byte]Reactor{testCh: NewTestReactor(chDescs, true)}
-	pk := ed25519.GenPrivKey()
+	pk := signature.GenPrivKey()
 	pc, err := testOutboundPeerConn(addr, config, false, pk)
 	if err != nil {
 		return nil, err

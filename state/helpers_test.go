@@ -3,12 +3,13 @@ package state_test
 import (
 	"bytes"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"time"
 
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
@@ -98,7 +99,7 @@ func makeState(nVals, height int) (sm.State, dbm.DB, map[string]types.PrivValida
 	privVals := make(map[string]types.PrivValidator, nVals)
 	for i := 0; i < nVals; i++ {
 		secret := []byte(fmt.Sprintf("test%d", i))
-		pk := ed25519.GenPrivKeyFromSecret(secret)
+		pk := signature.GenPrivKeyFromSecret(secret)
 		valAddr := pk.PubKey().Address()
 		vals[i] = types.GenesisValidator{
 			Address: valAddr,
@@ -145,7 +146,7 @@ func makeBlock(state sm.State, height int64) *types.Block {
 func genValSet(size int) *types.ValidatorSet {
 	vals := make([]*types.Validator, size)
 	for i := 0; i < size; i++ {
-		vals[i] = types.NewValidator(ed25519.GenPrivKey().PubKey(), 10)
+		vals[i] = types.NewValidator(signature.GenPrivKey().PubKey(), 10)
 	}
 	return types.NewValidatorSet(vals)
 }
@@ -212,7 +213,7 @@ func makeHeaderPartsResponsesParams(
 }
 
 func randomGenesisDoc() *types.GenesisDoc {
-	pubkey := ed25519.GenPrivKey().PubKey()
+	pubkey := signature.GenPrivKey().PubKey()
 	return &types.GenesisDoc{
 		GenesisTime: tmtime.Now(),
 		ChainID:     "abc",

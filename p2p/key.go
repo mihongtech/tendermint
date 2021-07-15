@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+	"github.com/mihongtech/crypto/signature"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmos "github.com/tendermint/tendermint/libs/os"
 )
@@ -56,7 +56,7 @@ func LoadOrGenNodeKey(filePath string) (*NodeKey, error) {
 		return nodeKey, nil
 	}
 
-	privKey := ed25519.GenPrivKey()
+	privKey := signature.GenPrivKey()
 	nodeKey := &NodeKey{
 		PrivKey: privKey,
 	}

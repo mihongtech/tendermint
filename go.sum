@@ -308,8 +308,6 @@ github.com/mattn/go-runewidth v0.0.2/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzp
 github.com/matttproud/golang_protobuf_extensions v1.0.1 h1:4hp9jkHxhMHkqkrB3Ix0jegS5sx/RkqARlsWZ6pIwiU=
 github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
 github.com/miekg/dns v1.0.14/go.mod h1:W1PPwlIAgtquWBMBEV9nkV9Cazfe8ScdGz/Lj7v3Nrg=
-github.com/mihongtech/crypto v0.0.0-20210713081430-c9a4db655837 h1:7cZtoQNwe3nhOaWely1eGaUxCp776Ot6zdGGkRcuksw=
-github.com/mihongtech/crypto v0.0.0-20210713081430-c9a4db655837/go.mod h1:k/Ik5XAy+OkPIdM/ZcbWrd137291kuN9CrVbi5Y1L5Q=
 github.com/mihongtech/iavl v0.0.0-20210713090747-d793fb28ccd4 h1:o7PO8wntQMIuZvd3gOz29q1A1X0ZdnDMmMS9fSiGqs0=
 github.com/mihongtech/iavl v0.0.0-20210713090747-d793fb28ccd4/go.mod h1:5vIdGzMqWAi6QVxc18OH77M5vMXp5g84y73phSRTPu8=
 github.com/mimoo/StrobeGo v0.0.0-20181016162300-f8f6d4d2b643 h1:hLDRPB66XQT/8+wG9WsDpiCvZf1yKO7sz7scAjSlBa0=

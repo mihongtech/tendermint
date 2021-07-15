@@ -3,10 +3,11 @@ package node
 import (
 	"errors"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"io/ioutil"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
+
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmos "github.com/tendermint/tendermint/libs/os"
@@ -154,7 +155,7 @@ type FilePV struct {
 // GenFilePV generates a new validator with randomly generated private key
 // and sets the filePaths, but does not call Save().
 func GenFilePV(keyFilePath, stateFilePath string) *FilePV {
-	privKey := ed25519.GenPrivKey()
+	privKey := signature.GenPrivKey()
 
 	return &FilePV{
 		Key: FilePVKey{

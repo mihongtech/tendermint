@@ -4,6 +4,7 @@ package e2e
 import (
 	"errors"
 	"fmt"
+	"github.com/mihongtech/crypto/signature"
 	"io"
 	"math/rand"
 	"net"
@@ -13,7 +14,6 @@ import (
 	"strings"
 
 	"github.com/mihongtech/crypto"
-	"github.com/mihongtech/crypto/ed25519"
 	"github.com/mihongtech/crypto/secp256k1"
 	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
 	mcs "github.com/tendermint/tendermint/test/maverick/consensus"
@@ -480,7 +480,7 @@ func newKeyGenerator(seed int64) *keyGenerator {
 }
 
 func (g *keyGenerator) Generate(keyType string) crypto.PrivKey {
-	seed := make([]byte, ed25519.SeedSize)
+	seed := make([]byte, signature.SeedSize)
 
 	_, err := io.ReadFull(g.random, seed)
 	if err != nil {
@@ -490,7 +490,7 @@ func (g *keyGenerator) Generate(keyType string) crypto.PrivKey {
 	case "secp256k1":
 		return secp256k1.GenPrivKeySecp256k1(seed)
 	case "", "ed25519":
-		return ed25519.GenPrivKeyFromSecret(seed)
+		return signature.GenPrivKeyFromSecret(seed)
 	default:
 		panic("KeyType not supported") // should not make it this far
 	}
