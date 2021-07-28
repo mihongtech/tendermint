@@ -9,7 +9,7 @@ import (
 
 	"github.com/mihongtech/crypto"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
 )
 
 func TestABCIPubKey(t *testing.T) {

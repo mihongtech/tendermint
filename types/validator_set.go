@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/mihongtech/crypto/merkle"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmmath "github.com/mihongtech/tendermint/libs/math"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 const (

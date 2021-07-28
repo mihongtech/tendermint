@@ -11,8 +11,8 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/protoio"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/libs/protoio"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 func examplePrevote() *Vote {

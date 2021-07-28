@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto/tmhash"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	tmtime "github.com/mihongtech/tendermint/types/time"
 )
 
 // ValidateTime does a basic time validation ensuring time does not drift too

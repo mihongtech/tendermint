@@ -5,10 +5,10 @@ import (
 
 	"github.com/mihongtech/crypto"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	cryptoproto "github.com/tendermint/tendermint/proto/tendermint/crypto"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	cryptoproto "github.com/mihongtech/tendermint/proto/tendermint/crypto"
+	privvalproto "github.com/mihongtech/tendermint/proto/tendermint/privval"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 func DefaultValidationRequestHandler(

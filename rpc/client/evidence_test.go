@@ -11,13 +11,13 @@ import (
 
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/mihongtech/crypto/tmhash"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/privval"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/rpc/client"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	"github.com/mihongtech/tendermint/privval"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/rpc/client"
+	rpctest "github.com/mihongtech/tendermint/rpc/test"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // For some reason the empty node used in tests has a time of

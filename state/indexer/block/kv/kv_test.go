@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
+	abci "github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/libs/pubsub/query"
+	blockidxkv "github.com/mihongtech/tendermint/state/indexer/block/kv"
+	"github.com/mihongtech/tendermint/types"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	blockidxkv "github.com/tendermint/tendermint/state/indexer/block/kv"
-	"github.com/tendermint/tendermint/types"
 	db "github.com/tendermint/tm-db"
 )
 

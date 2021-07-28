@@ -14,13 +14,13 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/mihongtech/crypto/merkle"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/bytes"
-	lcmock "github.com/tendermint/tendermint/light/rpc/mocks"
-	tmcrypto "github.com/tendermint/tendermint/proto/tendermint/crypto"
-	rpcmock "github.com/tendermint/tendermint/rpc/client/mocks"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/libs/bytes"
+	lcmock "github.com/mihongtech/tendermint/light/rpc/mocks"
+	tmcrypto "github.com/mihongtech/tendermint/proto/tendermint/crypto"
+	rpcmock "github.com/mihongtech/tendermint/rpc/client/mocks"
+	ctypes "github.com/mihongtech/tendermint/rpc/core/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // TestABCIQuery tests ABCIQuery requests and verifies proofs. HAPPY PATH 😀

@@ -15,15 +15,15 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	"github.com/mihongtech/crypto"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmstore "github.com/tendermint/tendermint/proto/tendermint/store"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	cfg "github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmstore "github.com/mihongtech/tendermint/proto/tendermint/store"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
+	"github.com/mihongtech/tendermint/version"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular

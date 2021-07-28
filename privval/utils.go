@@ -6,8 +6,8 @@ import (
 	"github.com/mihongtech/crypto/signature"
 	"net"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmnet "github.com/mihongtech/tendermint/libs/net"
 )
 
 // IsConnTimeout returns a boolean indicating whether the error is known to

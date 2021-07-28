@@ -1,4 +1,4 @@
-module github.com/tendermint/tendermint
+module github.com/mihongtech/tendermint
 
 go 1.15
 
@@ -33,4 +33,3 @@ require (
 	google.golang.org/grpc v1.37.0
 )
 
-replace github.com/mihongtech/crypto => ./../../mihongtech/crypto

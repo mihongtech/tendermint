@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/mihongtech/crypto"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	"github.com/mihongtech/tendermint/version"
 )
 
 func TestLightBlockValidateBasic(t *testing.T) {

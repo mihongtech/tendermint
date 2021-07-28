@@ -10,10 +10,10 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	"github.com/mihongtech/tendermint/version"
 )
 
 var defaultVoteTime = time.Date(2019, 1, 1, 0, 0, 0, 0, time.UTC)

@@ -5,14 +5,14 @@ import (
 	"sort"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/config"
+	tmsync "github.com/mihongtech/tendermint/libs/sync"
+	"github.com/mihongtech/tendermint/p2p"
+	ssproto "github.com/mihongtech/tendermint/proto/tendermint/statesync"
+	"github.com/mihongtech/tendermint/proxy"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
 )
 
 const (

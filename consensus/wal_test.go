@@ -15,11 +15,11 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/mihongtech/crypto/merkle"
-	"github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/libs/autofile"
-	"github.com/tendermint/tendermint/libs/log"
-	tmtypes "github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	"github.com/mihongtech/tendermint/consensus/types"
+	"github.com/mihongtech/tendermint/libs/autofile"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmtypes "github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
 )
 
 const (

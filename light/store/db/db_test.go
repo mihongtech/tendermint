@@ -12,10 +12,10 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	"github.com/mihongtech/tendermint/types"
+	"github.com/mihongtech/tendermint/version"
 )
 
 func TestLast_FirstLightBlockHeight(t *testing.T) {

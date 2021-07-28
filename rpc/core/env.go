@@ -5,16 +5,16 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/libs/log"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/state/indexer"
-	"github.com/tendermint/tendermint/state/txindex"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/consensus"
+	"github.com/mihongtech/tendermint/libs/log"
+	mempl "github.com/mihongtech/tendermint/mempool"
+	"github.com/mihongtech/tendermint/p2p"
+	"github.com/mihongtech/tendermint/proxy"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/state/indexer"
+	"github.com/mihongtech/tendermint/state/txindex"
+	"github.com/mihongtech/tendermint/types"
 )
 
 const (

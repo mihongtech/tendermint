@@ -10,14 +10,14 @@ import (
 
 	"github.com/mihongtech/crypto"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmstate "github.com/mihongtech/tendermint/proto/tendermint/state"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/proxy"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
 )
 
 type paramsChangeTestCase struct {

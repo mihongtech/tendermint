@@ -11,14 +11,14 @@ import (
 
 	"github.com/mihongtech/crypto/tmhash"
 
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/state"
+	"github.com/mihongtech/tendermint/privval"
+	"github.com/mihongtech/tendermint/state"
 
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmnet "github.com/mihongtech/tendermint/libs/net"
+	tmos "github.com/mihongtech/tendermint/libs/os"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // Test harness error codes (which act as exit codes when the test harness fails).

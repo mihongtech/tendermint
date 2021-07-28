@@ -12,15 +12,15 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/evidence/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	sm "github.com/tendermint/tendermint/state"
-	smmocks "github.com/tendermint/tendermint/state/mocks"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/mihongtech/tendermint/evidence"
+	"github.com/mihongtech/tendermint/evidence/mocks"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	sm "github.com/mihongtech/tendermint/state"
+	smmocks "github.com/mihongtech/tendermint/state/mocks"
+	"github.com/mihongtech/tendermint/types"
+	"github.com/mihongtech/tendermint/version"
 )
 
 const (

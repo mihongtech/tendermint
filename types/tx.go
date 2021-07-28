@@ -7,8 +7,8 @@ import (
 
 	"github.com/mihongtech/crypto/merkle"
 	"github.com/mihongtech/crypto/tmhash"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmbytes "github.com/mihongtech/tendermint/libs/bytes"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 // Tx is an arbitrary byte array.

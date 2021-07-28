@@ -9,19 +9,19 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	tmcon "github.com/tendermint/tendermint/consensus"
-	cstypes "github.com/tendermint/tendermint/consensus/types"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmevents "github.com/tendermint/tendermint/libs/events"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/log"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/p2p"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	tmcon "github.com/mihongtech/tendermint/consensus"
+	cstypes "github.com/mihongtech/tendermint/consensus/types"
+	"github.com/mihongtech/tendermint/libs/bits"
+	tmevents "github.com/mihongtech/tendermint/libs/events"
+	tmjson "github.com/mihongtech/tendermint/libs/json"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmsync "github.com/mihongtech/tendermint/libs/sync"
+	"github.com/mihongtech/tendermint/p2p"
+	tmcons "github.com/mihongtech/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
 )
 
 const (

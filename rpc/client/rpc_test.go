@@ -13,17 +13,17 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	mempl "github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/rpc/client"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	rpclocal "github.com/tendermint/tendermint/rpc/client/local"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmmath "github.com/mihongtech/tendermint/libs/math"
+	mempl "github.com/mihongtech/tendermint/mempool"
+	"github.com/mihongtech/tendermint/rpc/client"
+	rpchttp "github.com/mihongtech/tendermint/rpc/client/http"
+	rpclocal "github.com/mihongtech/tendermint/rpc/client/local"
+	ctypes "github.com/mihongtech/tendermint/rpc/core/types"
+	rpcclient "github.com/mihongtech/tendermint/rpc/jsonrpc/client"
+	rpctest "github.com/mihongtech/tendermint/rpc/test"
+	"github.com/mihongtech/tendermint/types"
 )
 
 var (

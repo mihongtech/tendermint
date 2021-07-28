@@ -11,15 +11,15 @@ import (
 
 	db "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/store"
-	"github.com/tendermint/tendermint/types"
+	"github.com/mihongtech/tendermint/abci/example/kvstore"
+	cfg "github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	"github.com/mihongtech/tendermint/privval"
+	"github.com/mihongtech/tendermint/proxy"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/store"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // WALGenerateNBlocks generates a consensus WAL. It does this by spinning up a

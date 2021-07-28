@@ -8,8 +8,8 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/signature"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
+	tmjson "github.com/mihongtech/tendermint/libs/json"
+	tmos "github.com/mihongtech/tendermint/libs/os"
 )
 
 // ID is a hex-encoded crypto.Address

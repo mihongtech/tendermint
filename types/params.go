@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto/tmhash"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 const (

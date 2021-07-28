@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // RetrySignerClient wraps SignerClient adding retry for each operation (except

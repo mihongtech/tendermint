@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto/signature"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmos "github.com/tendermint/tendermint/libs/os"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmnet "github.com/mihongtech/tendermint/libs/net"
+	tmos "github.com/mihongtech/tendermint/libs/os"
 
-	"github.com/tendermint/tendermint/privval"
+	"github.com/mihongtech/tendermint/privval"
 )
 
 func main() {

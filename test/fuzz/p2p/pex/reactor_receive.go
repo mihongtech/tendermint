@@ -4,12 +4,12 @@ import (
 	"github.com/mihongtech/crypto/signature"
 	"net"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/pex"
-	"github.com/tendermint/tendermint/version"
+	"github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/libs/log"
+	"github.com/mihongtech/tendermint/libs/service"
+	"github.com/mihongtech/tendermint/p2p"
+	"github.com/mihongtech/tendermint/p2p/pex"
+	"github.com/mihongtech/tendermint/version"
 )
 
 var (

@@ -17,15 +17,15 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/evidence"
-	"github.com/tendermint/tendermint/evidence/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/p2p"
-	p2pmocks "github.com/tendermint/tendermint/p2p/mocks"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/evidence"
+	"github.com/mihongtech/tendermint/evidence/mocks"
+	"github.com/mihongtech/tendermint/libs/log"
+	"github.com/mihongtech/tendermint/p2p"
+	p2pmocks "github.com/mihongtech/tendermint/p2p/mocks"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
 )
 
 var (

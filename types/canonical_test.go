@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/mihongtech/crypto/tmhash"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 func TestCanonicalizeBlockID(t *testing.T) {

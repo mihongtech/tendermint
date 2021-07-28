@@ -6,14 +6,14 @@ import (
 	"time"
 
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/fail"
-	"github.com/tendermint/tendermint/libs/log"
-	mempl "github.com/tendermint/tendermint/mempool"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/libs/fail"
+	"github.com/mihongtech/tendermint/libs/log"
+	mempl "github.com/mihongtech/tendermint/mempool"
+	tmstate "github.com/mihongtech/tendermint/proto/tendermint/state"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/proxy"
+	"github.com/mihongtech/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

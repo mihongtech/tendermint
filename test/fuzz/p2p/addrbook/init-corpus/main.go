@@ -12,7 +12,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/tendermint/tendermint/p2p"
+	"github.com/mihongtech/tendermint/p2p"
 )
 
 func main() {

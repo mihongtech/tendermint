@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/mihongtech/crypto/tmhash"
-	cfg "github.com/tendermint/tendermint/config"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	cfg "github.com/mihongtech/tendermint/config"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
 )
 
 var config *cfg.Config // NOTE: must be reset for each _test.go file

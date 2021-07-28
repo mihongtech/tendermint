@@ -6,11 +6,11 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	"github.com/mihongtech/tendermint/types"
+	tmtime "github.com/mihongtech/tendermint/types/time"
+	"github.com/mihongtech/tendermint/version"
 )
 
 // privKeys is a helper type for testing.

@@ -13,11 +13,11 @@ import (
 
 	"github.com/mihongtech/crypto"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/mihongtech/tendermint/libs/bytes"
+	"github.com/mihongtech/tendermint/libs/log"
 
-	"github.com/tendermint/tendermint/config"
-	tmconn "github.com/tendermint/tendermint/p2p/conn"
+	"github.com/mihongtech/tendermint/config"
+	tmconn "github.com/mihongtech/tendermint/p2p/conn"
 )
 
 func TestPeerBasic(t *testing.T) {

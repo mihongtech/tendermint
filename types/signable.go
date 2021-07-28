@@ -2,7 +2,7 @@ package types
 
 import (
 	"github.com/mihongtech/crypto/signature"
-	tmmath "github.com/tendermint/tendermint/libs/math"
+	tmmath "github.com/mihongtech/tendermint/libs/math"
 )
 
 var (

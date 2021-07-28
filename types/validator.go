@@ -8,8 +8,8 @@ import (
 
 	"github.com/mihongtech/crypto"
 	ce "github.com/mihongtech/crypto/encoding"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 // Volatile state for each Validator

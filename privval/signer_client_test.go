@@ -10,11 +10,11 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/tmhash"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	cryptoproto "github.com/tendermint/tendermint/proto/tendermint/crypto"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	cryptoproto "github.com/mihongtech/tendermint/proto/tendermint/crypto"
+	privvalproto "github.com/mihongtech/tendermint/proto/tendermint/privval"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 type signerTestCase struct {

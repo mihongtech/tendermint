@@ -7,12 +7,12 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/signature"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmnet "github.com/mihongtech/tendermint/libs/net"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/p2p/conn"
+	"github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/p2p/conn"
 )
 
 const testCh = 0x01

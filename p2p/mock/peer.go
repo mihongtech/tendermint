@@ -4,9 +4,9 @@ import (
 	"github.com/mihongtech/crypto/signature"
 	"net"
 
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/p2p/conn"
+	"github.com/mihongtech/tendermint/libs/service"
+	"github.com/mihongtech/tendermint/p2p"
+	"github.com/mihongtech/tendermint/p2p/conn"
 )
 
 type Peer struct {

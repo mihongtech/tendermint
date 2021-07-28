@@ -6,9 +6,9 @@ import (
 
 	"github.com/mihongtech/crypto"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	privvalproto "github.com/mihongtech/tendermint/proto/tendermint/privval"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // SignerClient implements PrivValidator.

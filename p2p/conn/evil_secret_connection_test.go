@@ -15,8 +15,8 @@ import (
 	"github.com/mihongtech/crypto"
 
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	"github.com/tendermint/tendermint/libs/protoio"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/mihongtech/tendermint/libs/protoio"
+	tmp2p "github.com/mihongtech/tendermint/proto/tendermint/p2p"
 )
 
 type buffer struct {

@@ -15,8 +15,8 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/secp256k1"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	mcs "github.com/tendermint/tendermint/test/maverick/consensus"
+	rpchttp "github.com/mihongtech/tendermint/rpc/client/http"
+	mcs "github.com/mihongtech/tendermint/test/maverick/consensus"
 )
 
 const (

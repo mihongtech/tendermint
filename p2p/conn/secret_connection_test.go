@@ -20,9 +20,9 @@ import (
 
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/sr25519"
-	"github.com/tendermint/tendermint/libs/async"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
+	"github.com/mihongtech/tendermint/libs/async"
+	tmos "github.com/mihongtech/tendermint/libs/os"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
 )
 
 // Run go test -update from within this module

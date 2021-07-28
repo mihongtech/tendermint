@@ -11,8 +11,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/tendermint/tendermint/p2p"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	"github.com/mihongtech/tendermint/p2p"
+	tmp2p "github.com/mihongtech/tendermint/proto/tendermint/p2p"
 )
 
 func main() {

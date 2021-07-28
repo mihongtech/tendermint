@@ -11,10 +11,10 @@ import (
 
 	"github.com/mihongtech/crypto/merkle"
 	"github.com/mihongtech/crypto/tmhash"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmjson "github.com/mihongtech/tendermint/libs/json"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 // Evidence represents any provable malicious activity by a validator.

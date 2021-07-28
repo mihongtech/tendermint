@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/mihongtech/crypto/merkle"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmcon "github.com/tendermint/tendermint/consensus"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/proxy"
-	sm "github.com/tendermint/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmcon "github.com/mihongtech/tendermint/consensus"
+	"github.com/mihongtech/tendermint/libs/log"
+	"github.com/mihongtech/tendermint/proxy"
+	sm "github.com/mihongtech/tendermint/state"
+	"github.com/mihongtech/tendermint/types"
 )
 
 var crc32c = crc32.MakeTable(crc32.Castagnoli)

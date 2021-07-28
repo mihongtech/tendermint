@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	types "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	tmsync "github.com/mihongtech/tendermint/libs/sync"
+	types "github.com/mihongtech/tendermint/rpc/jsonrpc/types"
 )
 
 const (

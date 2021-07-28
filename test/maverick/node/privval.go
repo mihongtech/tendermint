@@ -8,12 +8,12 @@ import (
 
 	"github.com/mihongtech/crypto"
 
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/libs/tempfile"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	tmbytes "github.com/mihongtech/tendermint/libs/bytes"
+	tmjson "github.com/mihongtech/tendermint/libs/json"
+	tmos "github.com/mihongtech/tendermint/libs/os"
+	"github.com/mihongtech/tendermint/libs/tempfile"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 // *******************************************************************************************************************

@@ -7,7 +7,7 @@ import (
 	"github.com/mihongtech/crypto/signature"
 
 	"github.com/mihongtech/crypto"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 // PrivValidator defines the functionality of a local Tendermint validator

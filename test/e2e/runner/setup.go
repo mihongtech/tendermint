@@ -20,11 +20,11 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
+	"github.com/mihongtech/tendermint/config"
+	"github.com/mihongtech/tendermint/p2p"
+	"github.com/mihongtech/tendermint/privval"
+	e2e "github.com/mihongtech/tendermint/test/e2e/pkg"
+	"github.com/mihongtech/tendermint/types"
 )
 
 const (

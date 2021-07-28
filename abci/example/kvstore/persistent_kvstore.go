@@ -10,10 +10,10 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	cryptoenc "github.com/mihongtech/crypto/encoding"
-	"github.com/tendermint/tendermint/abci/example/code"
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	pc "github.com/tendermint/tendermint/proto/tendermint/crypto"
+	"github.com/mihongtech/tendermint/abci/example/code"
+	"github.com/mihongtech/tendermint/abci/types"
+	"github.com/mihongtech/tendermint/libs/log"
+	pc "github.com/mihongtech/tendermint/proto/tendermint/crypto"
 )
 
 const (

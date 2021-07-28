@@ -14,23 +14,23 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	tmflags "github.com/tendermint/tendermint/libs/cli/flags"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	mcs "github.com/tendermint/tendermint/test/maverick/consensus"
-	maverick "github.com/tendermint/tendermint/test/maverick/node"
+	"github.com/mihongtech/tendermint/abci/server"
+	"github.com/mihongtech/tendermint/config"
+	tmflags "github.com/mihongtech/tendermint/libs/cli/flags"
+	"github.com/mihongtech/tendermint/libs/log"
+	tmnet "github.com/mihongtech/tendermint/libs/net"
+	"github.com/mihongtech/tendermint/light"
+	lproxy "github.com/mihongtech/tendermint/light/proxy"
+	lrpc "github.com/mihongtech/tendermint/light/rpc"
+	dbs "github.com/mihongtech/tendermint/light/store/db"
+	"github.com/mihongtech/tendermint/node"
+	"github.com/mihongtech/tendermint/p2p"
+	"github.com/mihongtech/tendermint/privval"
+	"github.com/mihongtech/tendermint/proxy"
+	rpcserver "github.com/mihongtech/tendermint/rpc/jsonrpc/server"
+	e2e "github.com/mihongtech/tendermint/test/e2e/pkg"
+	mcs "github.com/mihongtech/tendermint/test/maverick/consensus"
+	maverick "github.com/mihongtech/tendermint/test/maverick/node"
 )
 
 var logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))
@@ -181,7 +181,7 @@ func startLightClient(cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/mihongtech/tendermint/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

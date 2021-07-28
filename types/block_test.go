@@ -18,13 +18,13 @@ import (
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/merkle"
 	"github.com/mihongtech/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/bits"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	tmtime "github.com/tendermint/tendermint/types/time"
-	"github.com/tendermint/tendermint/version"
+	"github.com/mihongtech/tendermint/libs/bits"
+	"github.com/mihongtech/tendermint/libs/bytes"
+	tmrand "github.com/mihongtech/tendermint/libs/rand"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	tmtime "github.com/mihongtech/tendermint/types/time"
+	"github.com/mihongtech/tendermint/version"
 )
 
 func TestMain(m *testing.M) {

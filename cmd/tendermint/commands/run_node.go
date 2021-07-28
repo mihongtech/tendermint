@@ -8,10 +8,10 @@ import (
 	"os"
 
 	c_hash "github.com/mihongtech/crypto/hash"
+	cfg "github.com/mihongtech/tendermint/config"
+	tmos "github.com/mihongtech/tendermint/libs/os"
+	nm "github.com/mihongtech/tendermint/node"
 	"github.com/spf13/cobra"
-	cfg "github.com/tendermint/tendermint/config"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	nm "github.com/tendermint/tendermint/node"
 )
 
 var (

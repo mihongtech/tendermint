@@ -13,13 +13,13 @@ import (
 	"github.com/mihongtech/crypto"
 	"github.com/mihongtech/crypto/merkle"
 	"github.com/mihongtech/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	"github.com/mihongtech/tendermint/libs/bits"
+	tmbytes "github.com/mihongtech/tendermint/libs/bytes"
+	tmmath "github.com/mihongtech/tendermint/libs/math"
+	tmsync "github.com/mihongtech/tendermint/libs/sync"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
+	tmversion "github.com/mihongtech/tendermint/proto/tendermint/version"
+	"github.com/mihongtech/tendermint/version"
 )
 
 const (

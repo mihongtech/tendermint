@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	mempl "github.com/tendermint/tendermint/mempool"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	mempl "github.com/mihongtech/tendermint/mempool"
+	ctypes "github.com/mihongtech/tendermint/rpc/core/types"
+	rpctypes "github.com/mihongtech/tendermint/rpc/jsonrpc/types"
+	"github.com/mihongtech/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

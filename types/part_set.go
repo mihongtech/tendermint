@@ -7,12 +7,12 @@ import (
 	"io"
 
 	"github.com/mihongtech/crypto/merkle"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/mihongtech/tendermint/libs/bits"
+	tmbytes "github.com/mihongtech/tendermint/libs/bytes"
+	tmjson "github.com/mihongtech/tendermint/libs/json"
+	tmmath "github.com/mihongtech/tendermint/libs/math"
+	tmsync "github.com/mihongtech/tendermint/libs/sync"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 var (

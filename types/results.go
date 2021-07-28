@@ -2,7 +2,7 @@ package types
 
 import (
 	"github.com/mihongtech/crypto/merkle"
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
 )
 
 // ABCIResults wraps the deliver tx results to return a proof.

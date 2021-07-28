@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/tools/tm-signer-harness/internal"
-	"github.com/tendermint/tendermint/version"
+	"github.com/mihongtech/tendermint/libs/log"
+	"github.com/mihongtech/tendermint/privval"
+	"github.com/mihongtech/tendermint/tools/tm-signer-harness/internal"
+	"github.com/mihongtech/tendermint/version"
 )
 
 const (

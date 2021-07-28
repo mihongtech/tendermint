@@ -5,8 +5,8 @@ import (
 	"github.com/mihongtech/crypto/ed25519"
 	cryptoenc "github.com/mihongtech/crypto/encoding"
 	"github.com/mihongtech/crypto/secp256k1"
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	abci "github.com/mihongtech/tendermint/abci/types"
+	tmproto "github.com/mihongtech/tendermint/proto/tendermint/types"
 )
 
 //-------------------------------------------------------
