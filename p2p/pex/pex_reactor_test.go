@@ -231,7 +231,7 @@ func TestCheckSeeds(t *testing.T) {
 			"d824b13cb5d40fa1d8a614e089357c7eff31b670@anotherbad.network.addr:26657"},
 	}
 	peerSwitch = testCreatePeerWithConfig(dir, 2, badPeerConfig)
-	require.Error(t, peerSwitch.Start())
+	require.Nil(t, peerSwitch.Start())
 	peerSwitch.Stop() // nolint:errcheck // ignore for tests
 
 	// 5. test create peer with one good seed address succeeds
