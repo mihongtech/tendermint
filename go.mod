@@ -15,8 +15,8 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/gtank/merlin v0.1.1
 	github.com/libp2p/go-buffer-pool v0.0.2
-	github.com/mihongtech/crypto v0.0.0-20210728121539-e2762b7cbec1
-	github.com/mihongtech/iavl v0.0.0-20210713090747-d793fb28ccd4
+	github.com/mihongtech/crypto v0.0.0
+	github.com/mihongtech/iavl v0.0.0-20210728170344-60f50cdf1fcb
 	github.com/minio/highwayhash v1.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.8.0
@@ -32,4 +32,3 @@ require (
 	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	google.golang.org/grpc v1.37.0
 )
-
