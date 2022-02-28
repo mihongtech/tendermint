@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Workiva/go-datastructures v1.0.52
-	github.com/confio/ics23/go v0.6.3
+	github.com/confio/ics23/go v0.7.0
 	github.com/fortytw2/leaktest v1.3.0
 	github.com/go-kit/kit v0.10.0
 	github.com/go-logfmt/logfmt v0.5.0
