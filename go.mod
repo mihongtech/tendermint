@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Workiva/go-datastructures v1.0.52
-	github.com/confio/ics23/go v0.6.3
+	github.com/confio/ics23/go v0.9.0
 	github.com/fortytw2/leaktest v1.3.0
 	github.com/go-kit/kit v0.10.0
 	github.com/go-logfmt/logfmt v0.5.0
@@ -28,7 +28,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.7.0
 	github.com/tendermint/tm-db v0.6.4
-	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
-	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
+	golang.org/x/crypto v0.2.0
+	golang.org/x/net v0.2.0
 	google.golang.org/grpc v1.37.0
 )
